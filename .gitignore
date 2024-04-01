@@ -1,0 +1,25 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore built files
+/dist/
+
+# Ignore .DS_Store files (created by macOS)
+.DS_Store
+
+# Ignore IDE-specific files
+.idea/
+.vscode/
+
+# Ignore log files
+*.log
+
+# Ignore npm-debug.log
+npm-debug.log
+
+# Ignore any compiled files
+*.min.js
+*.min.css
+
+# Ignore any map files
+*.map
