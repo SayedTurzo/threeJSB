@@ -9,9 +9,15 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "parcel-bundler": "^1.12.5",
     "vite": "^5.2.0"
   },
   "dependencies": {
+    "dat.gui": "^0.7.9",
     "three": "^0.163.0"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/SayedTurzo/threeJSB.git",
+  "author": "SayedTurzo <51632150+SayedTurzo@users.noreply.github.com>",
+  "license": "MIT"
 }
