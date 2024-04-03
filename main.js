@@ -3,7 +3,6 @@ import * as THREE from 'three';
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import * as dat from 'dat.gui';
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
 import { setSkySphere } from './SkysphereHelper';
 
 // Instantiate the GLTFLoader
@@ -34,9 +33,8 @@ camera.position.set(0, 3, 9);
 const orbit = new OrbitControls(camera, renderer.domElement);
 orbit.update();
 
-const imagePath = '/HDRISky/puresky4k.hdr';
+const imagePath = '/HDRISky/puresky.hdr';
 setSkySphere(scene, imagePath);
-
 
 // Render scene function
 function render() {
@@ -181,7 +179,7 @@ function enableShadowCasting(model) {
 }
 
 // Create a directional light
-const directionalLight = new THREE.DirectionalLight(0xffffff, 3);
+const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 1);
 directionalLight.position.set(1, 1, 1).normalize(); // Set position
 scene.add(directionalLight);
 directionalLight.castShadow = true;
@@ -192,7 +190,7 @@ directionalLight.shadow.camera.left = -15;
 directionalLight.shadow.camera.right = 15;
 
 //Create ambient light
-const ambientLight = new THREE.AmbientLight(0xffffff,3);
+const ambientLight = new THREE.AmbientLight(0xFFFFFF,4);
 scene.add(ambientLight);
 
 const directionalLightHelper = new THREE.DirectionalLightHelper(directionalLight, 5);
